@@ -1,95 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Seduraco Shop</title>
   <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
     body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background: linear-gradient(to right, #fbc2eb, #a6c1ee);
+      font-family: 'Helvetica Neue', sans-serif;
+      background: #fafafa;
       color: #333;
-      text-align: center;
+      line-height: 1.5;
     }
+
+    /* Header / Hero */
     header {
-      padding: 50px;
-      font-size: 2em;
-      font-weight: bold;
+      background: linear-gradient(135deg, #fbc2eb, #ff4d88);
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     }
+    header h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+      letter-spacing: 2px;
+    }
+    header p {
+      font-size: 1.1em;
+    }
+
+    /* Product Grid */
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px;
-      padding: 40px;
-      max-width: 1000px;
+      grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
+      gap: 30px;
+      padding: 60px 20px;
+      max-width: 1200px;
       margin: auto;
     }
     .product {
-      background: white;
+      position: relative;
+      overflow: hidden;
       border-radius: 20px;
-      padding: 20px;
-      transition: transform 0.3s, box-shadow 0.3s;
+      background: #fff;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      cursor: pointer;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
     }
     .product:hover {
-      transform: scale(1.05);
-      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+      transform: translateY(-10px) scale(1.03);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.25);
     }
     .product img {
       width: 100%;
-      border-radius: 15px;
+      border-radius: 20px 20px 0 0;
+      transition: transform 0.4s ease;
     }
-    .product h3 {
-      margin: 15px 0 10px;
+    .product:hover img {
+      transform: scale(1.08);
+    }
+    .product .info {
+      padding: 20px;
+      text-align: center;
+    }
+    .product .info h3 {
       font-size: 1.2em;
+      margin-bottom: 10px;
     }
-    .product p {
-      font-size: 0.9em;
-      color: #666;
+    .product .info p {
+      font-size: 0.95em;
+      color: #777;
+      margin-bottom: 15px;
     }
-    .product button {
-      padding: 10px 20px;
+    .product .info button {
+      padding: 12px 28px;
       border: none;
       border-radius: 25px;
       background: #ff4d88;
       color: white;
+      font-size: 1em;
       cursor: pointer;
-      transition: all 0.3s;
+      transition: all 0.3s ease;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
     }
-    .product button:hover {
+    .product .info button:hover {
       background: #ff80aa;
-      transform: scale(1.05);
+      transform: translateY(-3px);
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 30px;
+      background: #fff;
+      border-top: 1px solid #eee;
+      font-size: 0.9em;
+      color: #777;
+    }
+
+    @media (max-width: 600px) {
+      header h1 { font-size: 2em; }
+      .product .info h3 { font-size: 1.1em; }
+      .product .info button { font-size: 0.9em; padding: 10px 22px; }
     }
   </style>
 </head>
 <body>
-  <header>Seduraco Shop 💕</header>
 
+  <header>
+    <h1>Seduraco Shop</h1>
+    <p>Discover our full collection of luxury lingerie</p>
+  </header>
+
+  <!-- Product Grid -->
   <div class="grid">
     <div class="product">
-      <img src="https://via.placeholder.com/200x200.png?text=Lingerie+1" alt="Product 1">
-      <h3>Elegant Lace Set</h3>
-      <p>Sizes XS-L • Black & Red</p>
-      <button onclick="window.location.href='https://instagram.com/seduraco';">Buy Now</button>
+      <img src="https://via.placeholder.com/300x400/ffb6c1/333333?text=Elegant+Lace+Set" alt="Elegant Lace Set">
+      <div class="info">
+        <h3>Elegant Lace Set</h3>
+        <p>Sizes XS–L • Black & Red</p>
+        <button onclick="window.location.href='https://instagram.com/seduraco';">Buy Now</button>
+      </div>
     </div>
     <div class="product">
-      <img src="https://via.placeholder.com/200x200.png?text=Lingerie+2" alt="Product 2">
-      <h3>Satin Bralette</h3>
-      <p>Sizes XS-L • Red</p>
-      <button onclick="window.location.href='https://instagram.com/seduraco';">Buy Now</button>
+      <img src="https://via.placeholder.com/300x400/f4a6c2/333333?text=Satin+Bralette" alt="Satin Bralette">
+      <div class="info">
+        <h3>Satin Bralette</h3>
+        <p>Sizes XS–L • Red</p>
+        <button onclick="window.location.href='https://instagram.com/seduraco';">Buy Now</button>
+      </div>
     </div>
     <div class="product">
-      <img src="https://via.placeholder.com/200x200.png?text=Lingerie+3" alt="Product 3">
-      <h3>Mesh Bodysuit</h3>
-      <p>Sizes XS-L • Black</p>
-      <button onclick="window.location.href='https://instagram.com/seduraco';">Buy Now</button>
+      <img src="https://via.placeholder.com/300x400/fddde6/333333?text=Mesh+Bodysuit" alt="Mesh Bodysuit">
+      <div class="info">
+        <h3>Mesh Bodysuit</h3>
+        <p>Sizes XS–L • Black</p>
+        <button onclick="window.location.href='https://instagram.com/seduraco';">Buy Now</button>
+      </div>
     </div>
     <div class="product">
-      <img src="https://via.placeholder.com/200x200.png?text=Lingerie+4" alt="Product 4">
-      <h3>Silk Chemise</h3>
-      <p>Sizes XS-L • Pink</p>
-      <button onclick="window.location.href='https://instagram.com/seduraco';">Buy Now</button>
+      <img src="https://via.placeholder.com/300x400/ffe4ec/333333?text=Silk+Chemise" alt="Silk Chemise">
+      <div class="info">
+        <h3>Silk Chemise</h3>
+        <p>Sizes XS–L • Pink</p>
+        <button onclick="window.location.href='https://instagram.com/seduraco';">Buy Now</button>
+      </div>
     </div>
   </div>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 Seduraco · Follow us on <a href="https://instagram.com/seduraco" target="_blank">Instagram</a>
+  </footer>
+
 </body>
 </html>
