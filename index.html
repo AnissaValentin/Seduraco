@@ -1,48 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Seduraco</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Seduraco – Home</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
+      font-family: 'Helvetica Neue', sans-serif;
       background: linear-gradient(to right, #fbc2eb, #a6c1ee);
       color: #333;
       text-align: center;
     }
+
     header {
-      padding: 50px;
-      font-size: 2em;
-      font-weight: bold;
+      padding: 100px 20px;
+      color: white;
+      text-shadow: 0 4px 8px rgba(0,0,0,0.3);
     }
-    button {
-      padding: 15px 30px;
+    header h1 {
+      font-size: 3em;
+      margin-bottom: 20px;
+      letter-spacing: 2px;
+    }
+    header p {
+      font-size: 1.3em;
+      margin-bottom: 40px;
+    }
+
+    .shop-btn {
+      padding: 15px 40px;
       border: none;
-      border-radius: 25px;
+      border-radius: 30px;
       background: #ff4d88;
       color: white;
-      font-size: 1em;
+      font-size: 1.2em;
       cursor: pointer;
       transition: all 0.3s ease;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+      text-decoration: none;
+      display: inline-block;
     }
-    button:hover {
+    .shop-btn:hover {
       background: #ff80aa;
-      transform: scale(1.05);
+      transform: translateY(-3px);
     }
-    section {
-      padding: 40px;
+
+    footer {
+      margin-top: 100px;
+      padding: 20px;
+      background: rgba(255,255,255,0.8);
+      font-size: 0.9em;
+      color: #555;
+    }
+    footer a {
+      color: #ff4d88;
+      text-decoration: none;
+      font-weight: bold;
     }
   </style>
 </head>
 <body>
-  <header>Welcome to Seduraco 💕</header>
-  <section>
-    <p>Luxury lingerie, designed to empower and inspire.</p>
-    <a href="https://instagram.com/seduraco" target="_blank">
-      <button>Shop Collection</button>
-    </a>
-  </section>
+
+  <header>
+    <h1>Welcome to Seduraco 💕</h1>
+    <p>Luxury lingerie designed to empower and inspire</p>
+    <a href="shop.html" class="shop-btn">Shop Collection</a>
+  </header>
+
+  <footer>
+    © 2025 Seduraco · Follow us on <a href="https://instagram.com/seduraco" target="_blank">Instagram</a>
+  </footer>
+
 </body>
 </html>
